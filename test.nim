@@ -15,26 +15,6 @@ proc complete(frag:string, i: int): string =
       if counter == i:
         return str.replace(frag, "")
       counter += 1
-proc save(i: int) =
-  #var file = open("LOG.txt", fmAppend)
-  let key = case i
-    of 32: " "
-    of 8: "[BACKSPACE]"
-    of 13: "n"
-    of VK_TAB: "[TAB]"
-    of VK_SHIFT: "[SHIFT]"
-    of VK_CONTROL: "[CTRL]"
-    of VK_ESCAPE: "[ESC]"
-    of VK_END: "[END]"
-    of VK_HOME: "[HOME]"
-    of VK_LEFT: "[LEFT]"
-    of VK_UP: "[UP]"
-    of VK_RIGHT: "[RIGHT]"
-    of VK_DOWN: "[DOWN]"
-    of 190, 110: "."
-    else: $chr(i)
-  #write(file, key)
-  #close(file)
 proc writeString(input: string) = 
   for c in input:
     keybd_event(VkKeyScan(c.BYTE).BYTE,0x9e.BYTE,0,0);
