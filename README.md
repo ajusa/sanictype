@@ -1,5 +1,5 @@
 # sanictype
-
+![alt text](https://raw.githubusercontent.com/ajusa/sanictype/master/demo.gif)
 autocomplete for windows, written in nim
 
 ### Usage
