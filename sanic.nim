@@ -30,7 +30,8 @@ proc main() =
           tabs = 0
           lastString = ""
         elif VK_BACK == i:
-          frag.delete(frag.len-2, frag.len-1)
+          frag.delete(frag.len, frag.len)
+          echo frag
         elif chr(i) in Letters: frag = frag & toLowerAscii($chr(i))
         if frag == "sanicon": on = true
         if frag == "sanicoff": on = false
