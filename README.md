@@ -7,7 +7,12 @@ Download it by clicking the download from zip button. Unzip it to whatever direc
 
 Next, double click on sanic.exe. A window should pop up with nothing in it. You are now good to go!
 
-To use, start typing a word, and hit tab. Continue hitting tab to cycle through words based on frequency. If it glitches out, delete the word, and make sure to press space before rewriting it. The program uses spaces and newlines to keep track of new words. Backspacing can be weird.
+To use, start typing a word, and hit tab. Continue hitting tab to cycle through words based on frequency. 
+
+If it glitches out, delete the word, and make sure to press space before rewriting it. The program uses spaces and newlines to keep track of new words. Backspacing can be weird.
+### Turning it on and off
+Type "sanicon" to turn it on, or "sanicoff" to turn it off. 
+There won't be a popup telling you whether or not anything happened, so just hit tab to check if it worked.
 ### Modifying the word list
 Just add to the top of it. Only words that are longer than three letters will be considered. I reccomend adding things like your email, or phone number. Then, you can type in joh and it tab to have it go to johndoe@gmail.com
 
