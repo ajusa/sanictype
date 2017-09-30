@@ -5,6 +5,7 @@ var frag = ""
 var lastString = ""
 var db = newSeq[string](0)
 var tabs = 0
+var on = true
 for str in readFile("db.txt").split:
   if len(str) > 3:
     db.add(str)
@@ -31,7 +32,9 @@ proc main() =
         elif VK_BACK == i:
           frag.delete(frag.len-2, frag.len-1)
         elif chr(i) in Letters: frag = frag & toLowerAscii($chr(i))
-        if VK_TAB == i:
+        if frag == "sanicon": on = true
+        if frag == "sanicoff": on = false
+        if VK_TAB == i and on:
           keybd_event(VK_BACK,0x9e.BYTE,0,0);
           keybd_event(VK_BACK,0x9e.BYTE,KEYEVENTF_KEYUP,0);
           for ch in lastString:
